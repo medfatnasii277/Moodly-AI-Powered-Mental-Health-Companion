@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 33% 98%;
+    --foreground: 240 10% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 20%;
+
+    --primary: 210 100% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 60 100% 94%;
+    --secondary-foreground: 24 10% 40%;
+
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+
+    --accent: 335 100% 90%;
+    --accent-foreground: 335 80% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 210 100% 66%;
+
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-rounded;
+  }
+}
+
+@layer components {
+  .calm-card {
+    @apply bg-white rounded-3xl shadow-md hover:shadow-lg transition-all duration-300 p-6 border border-calm-gray/30;
+  }
+  
+  .gentle-hover {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+}
+
+
+/* Add these to your global CSS file */
+
+@keyframes gentle-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-gentle-float {
+  animation: gentle-float 6s ease-in-out infinite;
+}
+
+.bubble-hover {
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.bubble-hover:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
