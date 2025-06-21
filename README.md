@@ -1,4 +1,4 @@
-## Tech Stack
+ Tech Stack
 
 - **Frontend**: React, Vite, TypeScript, Tailwind CSS, shadcn-ui
 - **Backend**: Express, Flask
